@@ -1,0 +1,47 @@
+body {
+    background: #f3f2f3;
+    color: #000000;
+    font-family: Arial;
+    font-size: 24px;
+    text-align: center;
+
+}
+#container {
+    margin: 30px auto;
+    height: 600px;
+    width: 900px;
+}
+#image_1{
+    background-color: rgb(112, 160, 39);
+    float:left;
+    height:85%;
+    width: 20%;
+    text-align: center;
+
+}
+#text_1{
+    background: rgb(114, 176, 234);
+    float:right;
+    height: 15%;
+    width: 80%;
+}
+#text_2{
+    background-color: rgb(247, 230, 139);
+    float:right;
+    height: 70%;
+    width: 80%;
+}
+
+#image_3{
+    background-color: rgb(248, 155, 209);
+    float:right;
+    height: 15%;
+    width:15%;
+}
+#text_3{
+    background-color: rgb(234, 172, 124);
+            float:left;
+
+    height: 15%;
+    width: 85%;
+}

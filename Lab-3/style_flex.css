@@ -1,0 +1,57 @@
+body {
+  background: #f3f2f3;
+  color: #000;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  text-align: center;
+}
+
+#container {
+  margin: 30px auto;
+  width: 900px;
+  height: 600px;
+  display: flex;    
+flex-direction: column;
+}
+
+#image_1 {
+  background-color: rgb(112, 160, 39);
+  flex: 0 0 20%;        
+}
+
+#top{
+ display: flex;
+ flex-direction: row;
+ flex: 1;              
+
+}
+#right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;              
+}
+
+#text_1 {
+  background: rgb(114, 176, 234);
+  flex: 0 0 15%;        
+}
+
+#text_2 {
+  background: rgb(247, 230, 139);
+  flex: 1;           
+}
+
+#bottom {
+  display: flex;        
+  flex: 0 0 15%;        
+}
+
+#text_3 {
+  background: rgb(234, 172, 124);
+  flex: 1;              
+}
+
+#image_3 {
+  background: rgb(248, 155, 209);
+  flex: 0 0 15%;       
+}
