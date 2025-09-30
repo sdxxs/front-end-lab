@@ -1,0 +1,33 @@
+.color1 {
+    background-color: #f30d0d; 
+    color: black;
+}
+
+.color2 {
+    background-color: #e77212; 
+    color: black;
+}
+
+#buttons-container {
+    text-align: center;
+    margin-top: 15px;
+}
+
+#buttons-container button {
+    font-size: 17px; 
+    padding: 10px 20px; 
+    margin: 7px; 
+    border: none;
+    border-radius: 3px; 
+    background-color: #afb384; 
+    color: white; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#buttons-container button:hover {
+    background-color: #c07c5d; 
+}
+img{
+    height: 300px;
+}
