@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>Сарабун Марія Ігорівна, ІК-33, ЛР-1, Варіант 10</title>
+  
+</head>
+<body>
+    <script src="script.js"></script>
+    <form id="Form">
+        <label>ПІБ: <input type="text" id="name"></label><br>
+        <label>Група: <input type="text" id="group"></label><br>
+        <label>Телефон: <input type="text" id="phone"></label><br>
+        <label>Адреса: <input type="text" id="addres"></label><br>
+        <label>e-mail: <input type="text" id="e-mail"></label><br>
+        <button type="button" onclick="validateForm()">Надіслати</button>
+      </form>
+      <table border="1" id="outputTable" style="margin-top: 20px; display: none; border-collapse: collapse; ">
+        <tr>
+          <th>ПІБ</th>
+          <th>Група</th>
+          <th>Телефон</th>
+          <th>Адреса</th>
+          <th>E-mail</th>
+        </tr>
+        <tr>
+          <td id="outputName"></td>
+          <td id="outputGroup"></td>
+          <td id="outputPhone"></td>
+          <td id="outputAddres"></td>
+          <td id="outputE-mail"></td>
+        </tr>
+      </table>
+
+          <table id="myTable" border="1" style="border-collapse: collapse; width: 300px; margin-top: 40px;">
+    <script>
+      let tableHTML = '';
+      for (let i = 0; i < 6; i++) {
+        tableHTML += '<tr>';
+        for (let j = 0; j < 6; j++) {
+          let cellNumber = i * 6 + j + 1;
+          tableHTML += `<td id="cell-${cellNumber}" 
+                          ${cellNumber === 10 ? 
+                            `onclick="changeColor(${cellNumber})"
+                             onmouseover="randomColor(${cellNumber})"
+                             ondblclick="changeRowColor(${cellNumber})"` 
+                            : ''}>
+                            ${cellNumber}
+                        </td>`;
+        }
+        tableHTML += '</tr>';
+      }
+      document.write(tableHTML);
+    </script>
+
+</table>
+
+<script>
+    //усі завдання виконуються лише для клітинки мого варіанту 10
+
+    //hover
+    function randomColor(cellNumber) {
+        if (cellNumber === 10) {
+            document.getElementById(`cell-${cellNumber}`).style.backgroundColor =
+                '#' + Math.floor(Math.random() * 16777215).toString(16);
+        }
+    }
+
+    let selectedCell = null;
+
+    //click: вибір кольору
+    function changeColor(cellNumber) {
+        if (cellNumber !== 10) return;
+        selectedCell = document.getElementById(`cell-${cellNumber}`);
+        const colorPicker = document.getElementById("colorPicker");
+        colorPicker.style.display = "block";
+        colorPicker.click();
+    }
+
+    function applyColor() {
+        const colorPicker = document.getElementById("colorPicker");
+        if (selectedCell) {
+            selectedCell.style.backgroundColor = colorPicker.value;
+        }
+        colorPicker.style.display = "none";
+    }
+
+    // змінюємо кольори в рядку, через одну клітинку вліво і вправо 
+    function changeRowColor(cellNumber) {
+        if (cellNumber !== 10) return;
+
+        const rowIndex = Math.floor((cellNumber - 1) / 6); // рядок
+        const startCol = (cellNumber - 1) % 6;            // колонка клітинки 30 (індекс у рядку)
+
+        // йдемо вліво
+        for (let j = startCol; j >= 0; j -= 2) {
+            const num = rowIndex * 6 + j + 1;
+            document.getElementById(`cell-${num}`).style.backgroundColor =
+                '#' + Math.floor(Math.random() * 16777215).toString(16);
+        }
+
+        // йдемо вправо
+        for (let j = startCol; j < 6; j += 2) {
+            const num = rowIndex * 6 + j + 1;
+            document.getElementById(`cell-${num}`).style.backgroundColor =
+                '#' + Math.floor(Math.random() * 16777215).toString(16);
+        }
+    }
+</script>
+
+<input type="color" id="colorPicker" class="color-picker" onchange="applyColor()" />
+
+</body>
+</html>
