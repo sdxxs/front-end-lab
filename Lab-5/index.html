@@ -16,7 +16,7 @@
         <label>e-mail: <input type="text" id="e-mail"></label><br>
         <button type="button" onclick="validateForm()">Надіслати</button>
       </form>
-      <table border="1" id="outputTable" style="margin-top: 20px; display: none; border-collapse: collapse; ">
+      <table id="outputTable" style="margin-top: 20px; display: none; border-collapse: collapse; ">
         <tr>
           <th>ПІБ</th>
           <th>Група</th>
@@ -33,7 +33,7 @@
         </tr>
       </table>
 
-          <table id="myTable" border="1" style="border-collapse: collapse; width: 300px; margin-top: 40px;">
+          <table id="myTable" style="border-collapse: collapse; width: 300px; margin-top: 40px;">
     <script>
       let tableHTML = '';
       for (let i = 0; i < 6; i++) {
@@ -109,7 +109,7 @@
     }
 </script>
 
-<input type="color" id="colorPicker" class="color-picker" onchange="applyColor()" />
+<input type="color" id="colorPicker" class="color-picker" onchange="applyColor()" >
 
 </body>
 </html>
