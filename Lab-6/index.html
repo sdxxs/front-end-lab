@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Сарабун Марія Ігорівна, ІК-33, ЛР-6, Варіант 10</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1> Варіант 10</h1>
+
+    <p class="hint">
+      Натисни кнопку, щоб завантажити дані з <code>https://randomuser.me/api</code>
+      і відобразити потрібні поля: <strong>picture</strong>, <strong>cell</strong>,
+      <strong>city</strong>, <strong>email</strong>, <strong>coordinates</strong>.
+    </p>
+
+    <div class="actions">
+      <button id="loadBtn" type="button">Отримати користувача</button>
+      <button id="clearBtn" type="button" class="secondary">Очистити</button>
+      <span id="status" role="status" aria-live="polite"></span>
+    </div>
+
+    <section id="card" class="card" hidden>
+      <div class="avatar-wrap">
+        <img id="avatar" alt="Фото користувача" />
+      </div>
+
+      <div class="grid">
+        <div class="row">
+          <span class="label">Мобільний (cell):</span>
+          <span id="cell" class="value"></span>
+        </div>
+
+        <div class="row">
+          <span class="label">Місто (city):</span>
+          <span id="city" class="value"></span>
+        </div>
+
+        <div class="row">
+          <span class="label">Email:</span>
+          <a id="email" class="value" href="#" rel="noopener noreferrer"></a>
+        </div>
+
+        <div class="row">
+          <span class="label">Координати:</span>
+          <span id="coords" ></span>
+        </div>
+      </div>
+    </section>
+
+   
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
